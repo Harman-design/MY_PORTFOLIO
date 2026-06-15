@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
+import { motion, useMotionValue, useSpring } from "framer-motion";
 import { ArrowRight, Download, Mail, Sparkles, Github, Linkedin } from "lucide-react";
 import {
   PERSONAL,
@@ -38,7 +38,11 @@ function FloatingIcon({
   return (
     <motion.div
       className="absolute text-2xl select-none pointer-events-none hidden lg:block"
-      style={{ left: x, top: y }}
+      style={{
+        left: x,
+        top: y,
+        opacity: 0.18,
+      }}
       animate={{
         y: [0, -16, -8, -18, 0],
         rotate: [0, 4, -2, 5, 0],
@@ -53,7 +57,6 @@ function FloatingIcon({
       }}
       aria-hidden="true"
       title={label}
-      style={{ left: x, top: y, opacity: 0.18 }}
     >
       {icon}
     </motion.div>
@@ -73,8 +76,6 @@ export default function Hero() {
   const mouseY = useMotionValue(0);
   const springX = useSpring(mouseX, { stiffness: 60, damping: 18 });
   const springY = useSpring(mouseY, { stiffness: 60, damping: 18 });
-  const cardRotX = useTransform(springY, [-200, 200], [6, -6]);
-  const cardRotY = useTransform(springX, [-200, 200], [-6, 6]);
 
   const heroRef = useRef<HTMLDivElement>(null);
 
