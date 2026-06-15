@@ -8,7 +8,7 @@ interface UseIntersectionObserverOptions extends IntersectionObserverInit {
 
 export function useIntersectionObserver(
   options: UseIntersectionObserverOptions = {}
-): [React.RefObject<HTMLDivElement | null>, boolean] {
+): [React.RefObject<HTMLDivElement>, boolean] {
   const {
     threshold = 0.1,
     root = null,
@@ -16,7 +16,7 @@ export function useIntersectionObserver(
     freezeOnceVisible = true,
   } = options;
 
-  const ref = useRef<HTMLDivElement>(null);
+  const ref = useRef<HTMLDivElement>(null!);
   const [isIntersecting, setIsIntersecting] = useState(false);
 
   useEffect(() => {
@@ -26,14 +26,20 @@ export function useIntersectionObserver(
     const observer = new IntersectionObserver(
       ([entry]) => {
         const isVisible = entry.isIntersecting;
+
         if (isVisible || !freezeOnceVisible) {
           setIsIntersecting(isVisible);
         }
       },
-      { threshold, root, rootMargin }
+      {
+        threshold,
+        root,
+        rootMargin,
+      }
     );
 
     observer.observe(el);
+
     return () => observer.disconnect();
   }, [threshold, root, rootMargin, freezeOnceVisible]);
 
