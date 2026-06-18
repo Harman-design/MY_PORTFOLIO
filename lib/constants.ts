@@ -11,7 +11,7 @@ export const PERSONAL = {
   degree: "B.Tech Computer Science Engineering",
   year: "2nd Year (2024–2028)",
   github: "https://github.com/harmanpreetkaur",
-  linkedin: "https://linkedin.com/in/harmanpreetkaur",
+  linkedin: "https://linkedin.com/in/harmanpreet-kaur-9b70ab32b/",
   resume: "/pdf24_converted.pdf",
   bio: [
     "I'm a passionate 2nd-year B.Tech Computer Science Engineering student at SRM Institute of Science and Technology, Chennai, with a deep interest in AI, Data Science, and building impactful technology solutions.",
@@ -322,7 +322,7 @@ export const ACHIEVEMENTS = [
     color: "purple",
     year: "2024",
   },
- 
+
   {
     id: 6,
     title: "Academic Excellence — CGPA 10",
@@ -371,8 +371,8 @@ export const CONTACT_LINKS = [
   },
   {
     label: "LinkedIn",
-    value: "linkedin.com/in/harmanpreetkaur",
-    href: "https://linkedin.com/in/harmanpreetkaur",
+    value: "linkedin.com/in/harmanpreet-kaur-9b70ab32b/",
+    href: "https://www.linkedin.com/in/harmanpreet-kaur-9b70ab32b/",
     icon: "Linkedin",
     color: "#0077b5",
     bg: "rgba(0,119,181,0.12)",
@@ -450,7 +450,7 @@ ACHIEVEMENTS:
 
 PERSONALITY TRAITS: Leadership skills, Hardworking, Problem Solver, Team Player, Quick Learner
 
-CONTACT: hk466967@gmail.coom | LinkedIn: linkedin.com/in/harmanpreetkaur
+CONTACT: hk466967@gmail.coom | LinkedIn: linkedin.com/in/harmanpreet-kaur-9b70ab32b/
 
 RESPONSE GUIDELINES:
 - Keep answers concise (2-4 sentences max)
